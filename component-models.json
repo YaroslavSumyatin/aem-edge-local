@@ -214,5 +214,55 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "personalized-top-tasks-item",
+    "fields": [
+      {
+        "component": "guid",
+        "name": "id",
+        "valueType": "string",
+        "label": "Unique Identifier",
+        "readOnly": true
+      },
+      {
+        "component": "boolean",
+        "name": "default",
+        "valueType": "boolean",
+        "label": "Default"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Top Task Image"
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Image Alt Text",
+        "required": false,
+        "valueType": "string",
+        "condition": {
+          "!!": [
+            {
+              "var": "image"
+            }
+          ]
+        }
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "linkText",
+        "label": "Top Task Title"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "link",
+        "label": "Top Task Link"
+      }
+    ]
   }
 ]
